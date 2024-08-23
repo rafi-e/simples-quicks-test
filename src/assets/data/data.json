@@ -1,0 +1,64 @@
+{
+    "tasks": [
+      {
+        "name": "Project Launch",
+        "isActive": true,
+        "subtasks": [
+          {
+            "title": "Finalize Design",
+            "isCompleted": true,
+            "deadline": "2024-08-20T00:00:00.000Z",
+            "description": "Finalize the design of the project, including the user interface, user experience, and visual design. Ensure that the design is consistent with the project's brand guidelines and meets the requirements of the stakeholders."
+          },
+          {
+            "title": "Develop Frontend",
+            "isCompleted": true,
+            "deadline": "2024-08-25T00:00:00.000Z",
+            "description": "Develop the frontend of the project using HTML, CSS, and JavaScript. Implement the design components, layout, and interactions. Ensure that the frontend is responsive, accessible, and performs well on different devices and browsers."
+          },
+          {
+            "title": "Test and Debug",
+            "isCompleted": false,
+            "deadline": "2024-08-28T00:00:00.000Z",
+            "description": "Test and debug the project to ensure that it meets the requirements and works as expected. Identify and fix bugs, optimize performance, and conduct usability testing to ensure a smooth user experience."
+          },
+          {
+            "title": "Deploy to Production",
+            "isCompleted": false,
+            "deadline": "2024-08-30T00:00:00.000Z",
+            "description": ""
+          }
+        ]
+      },
+      {
+        "name": "Personal Tasks",
+        "isActive": false,
+        "subtasks": [
+          {
+            "title": "Buy Groceries",
+            "isCompleted": true,
+            "deadline": "2024-08-22T00:00:00.000Z",
+            "description": "Buy groceries for the week, including fresh produce, meat, dairy products, and household essentials. Plan meals for the week and make a list of the necessary items to purchase."
+          },
+          {
+            "title": "Schedule Doctor's Appointment",
+            "isCompleted": false,
+            "deadline": "2024-08-24T00:00:00.000Z",
+            "description": "Schedule a doctor's appointment for a routine check-up, including booking the appointment, filling out any necessary paperwork, and preparing any questions or concerns to discuss with the doctor."
+          },
+          {
+            "title": "Pay Bills",
+            "isCompleted": true,
+            "deadline": "2024-08-26T00:00:00.000Z",
+            "description": "Pay bills for the month, including rent, utilities, credit cards, and other expenses. Ensure that all bills are paid on time to avoid late fees and penalties."
+          },
+          {
+            "title": "Plan Vacation",
+            "isCompleted": false,
+            "deadline": "2024-09-01T00:00:00.000Z",
+            "description": "Plan a vacation for the upcoming month, including booking flights, hotels, and activities. Research destinations, create an itinerary, and make any necessary travel arrangements."
+          }
+        ]
+      }
+    ]
+  }

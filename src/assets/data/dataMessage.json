@@ -1,0 +1,159 @@
+{
+  "conversations": [
+    {
+      "id": 1,
+      "groupName": "Friends",
+      "users": [
+        { "id": 1, "name": "Doni" },
+        { "id": 2, "name": "Melati" },
+        { "id": 10, "name": "You" }
+      ],
+      "messages": [
+        {
+          "id": 1,
+          "content": "Hello, how are you?",
+          "senderId": 1,
+          "isUser": false,
+          "createdAt": "2024-08-10 10:00:00",
+          "unread": false
+        },
+        {
+          "id": 2,
+          "content": "I'm good, thanks!",
+          "senderId": 2,
+          "isUser": false,
+          "createdAt": "2024-08-10 10:05:00",
+          "unread": false
+        },
+        {
+          "id": 3,
+          "content": "What's up?",
+          "senderId": 1,
+          "isUser": false,
+          "createdAt": "2024-08-10 10:10:00",
+          "unread": false
+        },
+        {
+          "id": 4,
+          "content": "Not much, just got back from vacation",
+          "senderId": 2,
+          "isUser": false,
+          "createdAt": "2024-08-10 10:15:00",
+          "unread": false
+        },
+        {
+          "id": 5,
+          "content": "Oh, nice! Where did you go?",
+          "senderId": 1,
+          "isUser": false,
+          "createdAt": "2024-08-10 10:20:00",
+          "unread": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "groupName": "Colleagues",
+      "users": [
+        { "id": 1, "name": "Rico" },
+        { "id": 4, "name": "Zahra" },
+        { "id": 10, "name": "You" }
+      ],
+      "messages": [
+        {
+          "id": 6,
+          "content": "Hey, have you seen the latest report?",
+          "senderId": 1,
+          "isUser": false,
+          "createdAt": "2024-08-07 14:00:00",
+          "unread": false
+        },
+        {
+          "id": 7,
+          "content": "No, I haven't. Can you share it with me?",
+          "senderId": 4,
+          "isUser": false,
+          "createdAt": "2024-08-07 14:05:00",
+          "unread": false
+        },
+        {
+          "id": 8,
+          "content": "Yeah, I'll send it over",
+          "senderId": 1,
+          "isUser": false,
+          "createdAt": "2024-08-07 14:10:00",
+          "unread": false
+        },
+        {
+          "id": 9,
+          "content": "Thanks! I'll take a look",
+          "senderId": 4,
+          "isUser": false,
+          "createdAt": "2024-08-07 14:15:00",
+          "unread": false
+        },
+        {
+          "id": 10,
+          "content": "Hey, what do you think about the report?",
+          "senderId": 1,
+          "isUser": false,
+          "createdAt": "2024-08-07 14:20:00",
+          "unread": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "groupName": "Group research for end of year assignments",
+      "users": [
+        { "id": 6, "name": "You" },
+        { "id": 7, "name": "Sanji" },
+        { "id": 8, "name": "Tiara" }
+      ],
+      "messages": [
+        {
+          "id": 11,
+          "content": "Hello Obaidullah, I will be your case advisor for case #029290. I have assigned some homework for you to fill. Please keep up with the due dates. Should you have any questions, you can message me anytime. Thanks.",
+          "senderId": 7,
+          "isUser": false,
+          "createdAt": "2024-08-03 09:00:00",
+          "unread": false
+        },
+        {
+          "id": 12,
+          "content": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "senderId": 6,
+          "isUser": true,
+          "createdAt": "2024-08-03 09:05:00",
+          "unread": false
+        },
+        {
+          "id": 13,
+          "content": "Sure thing, Claren",
+          "senderId": 7,
+          "isUser": false,
+          "createdAt": "2024-08-05 19:32:00",
+          "unread": false
+        },
+        {
+          "id": 14,
+          "content": "Thanks for the update!",
+          "senderId": 8,
+          "isUser": false,
+          "createdAt": "2024-08-05 19:33:00",
+          "unread": false
+        },
+        {
+          "id": 15,
+          "content": "You're welcome! Let me know if you have any questions.",
+          "senderId": 7,
+          "isUser": false,
+          "createdAt": "2024-08-05 19:34:00",
+          "unread": false
+        }
+      ]
+    }
+  ]
+}
+
+
