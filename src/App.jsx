@@ -56,7 +56,7 @@ function App() {
   return (
     <>
       <div className="absolute bottom-7 right-8 ">
-        <div className="flex flex-row-reverse items-center gap-6">
+        <div className="flex flex-row-reverse items-end gap-6">
           {showInbox ? (
             <div className="relative flex">
               <button
