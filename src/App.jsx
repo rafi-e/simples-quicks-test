@@ -1,63 +1,83 @@
 import { useState } from "react";
 import {
+  ArrowLeft,
   MessagesSquare,
   NotebookText,
+  Search,
+  UserRound,
+  X,
   Zap,
 } from "lucide-react";
 import Inbox from "./components/Inbox";
 import Task from "./components/Task";
 import InboxChat from "./components/InboxChat";
 
-const App = () => {
+function App() {
   const [showButtons, setShowButtons] = useState(false);
-  const [activeTab, setActiveTab] = useState(null);
+  const [showInbox, setShowInbox] = useState(false);
+  const [showTask, setShowTask] = useState(false);
   const [isInboxOpen, setIsInboxOpen] = useState(false);
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-    setShowButtons(false);
-  };
 
   const handleInboxChat = () => {
     setIsInboxOpen(true);
-    setActiveTab(null);
+    setShowInbox(false);
   };
 
-  const handleBackClick = () => {
-    setActiveTab(null);
+  const handleChat = () => {
+    setIsInboxOpen(false);
+    setShowInbox(true);
+  };
+
+  const handleClick = () => {
+    setShowButtons(!showButtons);
+  };
+
+  const handleClickBack = () => {
+    setShowInbox(false);
+    setShowTask(false);
     setShowButtons(false);
     setIsInboxOpen(false);
   };
 
-  const handleButtonClick = () => {
-    setShowButtons(!showButtons);
+  const handleInboxClick = () => {
+    setShowInbox(true);
+    setShowTask(false);
+    setShowButtons(false);
+    setIsInboxOpen(false);
+  };
+
+  const handleTaskClick = () => {
+    setShowTask(true);
+    setShowInbox(false);
+    setShowButtons(false);
+    setIsInboxOpen(false);
   };
 
   return (
     <>
       <div className="absolute bottom-7 right-8 ">
-        <div className="flex flex-row-reverse items-end gap-6">
-          {activeTab === "inbox" ? (
+        <div className="flex flex-row-reverse items-center gap-6">
+          {showInbox ? (
             <div className="relative flex">
               <button
-                onClick={handleBackClick}
+                onClick={handleClickBack}
                 className="absolute right-3 h-[68px] w-[68px] rounded-full bg-[#4F4F4F]"
               ></button>
               <button
-                onClick={handleButtonClick}
+                onClick={handleClick}
                 className="flex h-[68px] w-[68px] items-center justify-center text-center rounded-full bg-[#8785FF] z-10"
               >
                 <MessagesSquare className="size-10 text-white" />
               </button>
             </div>
-          ) : activeTab === "task" ? (
+          ) : showTask ? (
             <div className="relative flex">
               <button
-                onClick={handleBackClick}
+                onClick={handleClickBack}
                 className="absolute right-3 h-[68px] w-[68px] rounded-full bg-[#4F4F4F]"
               ></button>
               <button
-                onClick={handleButtonClick}
+                onClick={handleClick}
                 className="flex h-[68px] w-[68px] items-center justify-center text-center rounded-full bg-[#F8B76B] z-10"
               >
                 <NotebookText className="size-10 text-white" />
@@ -66,7 +86,7 @@ const App = () => {
           ) : (
             <button
               className="flex h-[68px] w-[68px] items-center justify-center text-center rounded-full bg-[#2F80ED]/80 hover:bg-[#2F80ED] z-10"
-              onClick={handleButtonClick}
+              onClick={handleClick}
             >
               <Zap className="size-10 text-white fill-white" />
             </button>
@@ -74,22 +94,22 @@ const App = () => {
 
           {showButtons && (
             <div className="flex flex-row justify-center items-center gap-6">
-              {activeTab === "inbox" ? (
+              {showInbox ? (
                 <div className="relative flex">
-                  <button
-                    className="flex h-[68px] w-[68px] items-center justify-center text-center rounded-full bg-[#F8B76B] z-10"
-                    onClick={() => handleTabClick("task")}
-                  >
-                    <NotebookText className="size-10 text-white" />
+                  <button className="flex h-[68px] w-[68px] items-center justify-center text-center rounded-full bg-[#F8B76B] z-10">
+                    <NotebookText
+                      onClick={handleTaskClick}
+                      className="size-10 text-white"
+                    />
                   </button>
                 </div>
-              ) : activeTab === "task" ? (
+              ) : showTask ? (
                 <div className="relative flex">
-                  <button
-                    className="flex h-[68px] w-[68px] items-center justify-center text-center rounded-full bg-[#8785FF] z-10"
-                    onClick={() => handleTabClick("inbox")}
-                  >
-                    <MessagesSquare className="size-10 text-white" />
+                  <button className="flex h-[68px] w-[68px] items-center justify-center text-center rounded-full bg-[#8785FF] z-10">
+                    <MessagesSquare
+                      onClick={handleInboxClick}
+                      className="size-10 text-white"
+                    />
                   </button>
                 </div>
               ) : (
@@ -104,9 +124,9 @@ const App = () => {
                     <h2>Inbox</h2>
                     <button
                       className="flex h-[60px] w-[60px] items-center justify-center text-center rounded-full hover:bg-gray-200 border"
-                      onClick={() => handleTabClick("inbox")}
+                      onClick={handleInboxClick}
                     >
-                      <MessagesSquare className="size-8 text-[#8785FF]" />
+                      <MessagesSquare className="h-20 text-[#8785FF]" />
                     </button>
                   </div>
                   <div
@@ -119,9 +139,9 @@ const App = () => {
                     <h2>Task</h2>
                     <button
                       className="flex h-[60px] w-[60px]  items-center justify-center text-center rounded-full hover:bg-gray-200 border"
-                      onClick={() => handleTabClick("task")}
+                      onClick={handleTaskClick}
                     >
-                      <NotebookText className="size-8 text-[#F8B76B]" />
+                      <NotebookText className="h-20 text-[#F8B76B]" />
                     </button>
                   </div>
                 </>
@@ -131,16 +151,13 @@ const App = () => {
         </div>
       </div>
 
-      {activeTab === "task" && <Task />}
-      {activeTab === "inbox" && <Inbox handleInboxChat={handleInboxChat} />}
+      {showTask && <Task />}
+      {showInbox && <Inbox handleInboxChat={handleInboxChat} />}
       {isInboxOpen && (
-        <InboxChat
-          setIsInboxOpen={setIsInboxOpen}
-          setShowInbox={setActiveTab}
-        />
+        <InboxChat handleChat={handleChat} setIsInboxOpen={setIsInboxOpen} />
       )}
     </>
   );
-};
+}
 
 export default App;

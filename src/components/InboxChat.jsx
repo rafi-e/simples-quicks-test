@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ArrowLeft, X } from "lucide-react";
 
-export default function InboxChat({ setIsInboxOpen, setShowInbox }) {
+export default function InboxChat({ handleChat, setIsInboxOpen }) {
   const [userInput, setUserInput] = useState("");
   const today = new Date();
   const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000);
@@ -115,11 +115,6 @@ export default function InboxChat({ setIsInboxOpen, setShowInbox }) {
     },
   ]);
 
-  const handleInboxChat = () => {
-    setIsInboxOpen(false);
-    setShowInbox(true);
-  };
-
   const handleSendMessage = () => {
     if (userInput.trim() !== "") {
       const currentTime = new Date().toLocaleTimeString("en-US", {
@@ -162,7 +157,7 @@ export default function InboxChat({ setIsInboxOpen, setShowInbox }) {
       const currentTime = new Date().toLocaleTimeString("en-US", {
         hour: "2-digit",
         minute: "2-digit",
-        hour12: false, 
+        hour12: false,
       });
       const currentDate = new Date().toLocaleDateString("en-US");
 
@@ -182,7 +177,7 @@ export default function InboxChat({ setIsInboxOpen, setShowInbox }) {
   return (
     <div className="absolute bottom-28 right-8 w-[734px] h-[737px] flex flex-col justify-start items-center border rounded-md shadow-md">
       <div className="flex items-center w-full h-20 justify-around border-b shadow">
-        <button onClick={handleInboxChat}>
+        <button onClick={handleChat}>
           <ArrowLeft />
         </button>
         <div className="flex flex-col w-[520px]">
