@@ -39,7 +39,7 @@ export default function Task() {
 
   
   return (
-    <div className="absolute bottom-28 right-8 w-[734px] h-[737px] flex flex-col justify-start items-center py-8 px-6 border rounded-md shadow-md">
+    <div className="absolute bottom-28 right-8 w-[734px] h-[737px] flex flex-col justify-start items-center py-8 px-6 bg-white border rounded-md shadow-md">
       {tasks?.length > 0 ? (
         <>
           <div className="relative flex justify-around w-full h-auto mx-auto bg-white rounded-lg">

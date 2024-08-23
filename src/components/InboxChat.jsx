@@ -175,7 +175,7 @@ export default function InboxChat({ handleChat, setIsInboxOpen }) {
   };
 
   return (
-    <div className="absolute bottom-28 right-8 w-[734px] h-[737px] flex flex-col justify-start items-center border rounded-md shadow-md">
+    <div className="absolute bottom-28 right-8 w-[734px] h-[737px] flex flex-col justify-start items-center bg-white border rounded-md shadow-md">
       <div className="flex items-center w-full h-20 justify-around border-b shadow">
         <button onClick={handleChat}>
           <ArrowLeft />

@@ -7,7 +7,7 @@ export default function Inbox({ handleInboxChat }) {
   const conversations = useSelector((state) => state.conversations);
 
   return (
-    <div className="absolute bottom-28 right-8 w-[734px] h-[737px] flex flex-col justify-start items-center py-8 px-6 border rounded-md shadow-md">
+    <div className="absolute bottom-28 right-8 w-[734px] h-[737px] flex flex-col justify-start items-center py-8 px-6 border bg-white rounded-md shadow-md">
       <div className="relative w-full h-auto pb-3 mx-auto bg-white rounded-lg">
         <input
           placeholder="Search"
