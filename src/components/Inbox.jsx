@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
-import { UserRound } from "lucide-react";
+import { Search, UserRound } from "lucide-react";
 
 export default function Inbox({ handleInboxChat }) {
   const dispatch = useDispatch();
